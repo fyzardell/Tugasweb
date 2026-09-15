@@ -1,257 +1,271 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrasi</title>
+    <title>Kopken Holic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Forum Registrasi</h1>
 
+    <!-- Splash Screen -->
+    <div id="splash" class="splash">
+        <div class="splash-content">
+            <div class="splash-line"></div>
+            <h1 class="splash-title">Kopken Holic</h1>
+            <p class="splash-tagline">Ngopi Dulu Aja</p>
+            <div class="splash-line"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Kopken Holic</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Beranda</a>
+                <a href="pages/gallery.html" class="nav-link">Galeri</a>
+                <a href="pages/about.html" class="nav-link">Tentang</a>
+                <a href="pages/developer.html" class="nav-link">Developer</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-particles">
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Kopi Kenangan Holic</div>
+                <h1 class="hero-title">
+                    <span class="hero-line hero-line-1">Ngopi,</span>
+                    <span class="hero-line hero-line-2"><em>Nugas</em></span>
+                    <span class="hero-line hero-line-3">Ngobrol.</span>
+                </h1>
+                <p class="hero-desc">Kumpulan anak kuliahan yang lebih sering ketemu di Kopi Kenangan daripada di
+                    kampus. Deadline? Kopken dulu. Skripsi macet? Kopken dulu. Hidup berat? Kopken terus.</p>
+                <div class="hero-cta">
+                    <a href="pages/gallery.html" class="btn btn-primary">
+                        <span>Lihat Aktivitas</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="pages/about.html" class="btn btn-outline">Tentang Kami</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">3+</span>
+                        <span class="hero-stat-label">Tahun Nongkrong</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">99+</span>
+                        <span class="hero-stat-label">Kopken Terhabiskan</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">0</span>
+                        <span class="hero-stat-label">SKL Tepat Waktu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-cup-wrapper">
+                    <div class="hero-cup-glow"></div>
+                    <svg class="hero-cup-svg" viewBox="0 0 280 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Saucer -->
+                        <ellipse cx="140" cy="310" rx="120" ry="18" fill="#E8DDD4" opacity="0.6" />
+                        <ellipse cx="140" cy="308" rx="110" ry="14" fill="#F0E8E0" />
+                        <!-- Cup Body -->
+                        <path d="M60 140 C60 140 55 280 80 295 C95 303 185 303 200 295 C225 280 220 140 220 140Z"
+                            fill="#FAF7F2" stroke="#C4956A" stroke-width="1.5" />
+                        <!-- Cup Handle -->
+                        <path d="M220 170 C250 170 265 200 265 220 C265 240 250 265 220 265" fill="none"
+                            stroke="#C4956A" stroke-width="1.5" stroke-linecap="round" />
+                        <!-- Coffee Surface -->
+                        <ellipse cx="140" cy="155" rx="78" ry="16" fill="#6B4226" />
+                        <ellipse cx="140" cy="153" rx="60" ry="11" fill="#8B5E3C" opacity="0.6" />
+                        <!-- Latte Art -->
+                        <path d="M125 148 C130 140 138 145 140 148 C142 145 150 140 155 148" fill="none"
+                            stroke="#FAF7F2" stroke-width="1" opacity="0.7" stroke-linecap="round" />
+                        <path d="M132 152 C136 148 140 150 140 153 C140 150 144 148 148 152" fill="none"
+                            stroke="#FAF7F2" stroke-width="0.8" opacity="0.5" stroke-linecap="round" />
+                        <!-- Steam Lines -->
+                        <path class="steam steam-1" d="M110 130 C110 115 115 105 110 90" stroke="#C4956A"
+                            stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.3" />
+                        <path class="steam steam-2" d="M140 125 C140 108 145 95 140 78" stroke="#C4956A"
+                            stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.3" />
+                        <path class="steam steam-3" d="M170 130 C170 115 165 105 170 90" stroke="#C4956A"
+                            stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.3" />
+                        <!-- Cup Rim Highlight -->
+                        <ellipse cx="140" cy="140" rx="80" ry="8" fill="none" stroke="#D4AA82" stroke-width="0.8"
+                            opacity="0.5" />
+                    </svg>
+                    <div class="hero-cup-ring"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Favorite Orders Section -->
+    <section class="signature">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Paling Laris</span>
+                <h2 class="section-title">Orderan Wajib</h2>
+                <p class="section-desc">Tiga menu yang paling sering dipesan kalau lagi nongkrong di Kopken.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-card-number">01</div>
+                    <div class="menu-card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M8 32h24M12 32V16c0-2 1-4 4-4h8c3 0 4 2 4 4v16" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M36 18h-4c-1 0-2 1-2 2v4c0 1 1 2 2 2h4c1 0 2-1 2-2v-4c0-1-1-2-2-2z"
+                                stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <h3 class="menu-card-name">Kopken Float</h3>
+                    <p class="menu-card-desc">Es Kopi Kenangan + ice cream vanilla. Pesanan default kalau lagi
+                        panas-panas dan otak udah nggak muter.</p>
+                    <span class="menu-card-price">Rp 22.000</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-number">02</div>
+                    <div class="menu-card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M10 34h20M14 34V14c0-3 2-5 5-5h2c3 0 5 2 5 5v20" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18 16c0 0 2-2 4 0" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M17 22c1-3 3-3 4 0" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="menu-card-name">Brown Sugar Signature</h3>
+                    <p class="menu-card-desc">Yang bikin kalian ngerjain tugas sampai larut malam. Gula aren bikin otak
+                        tetap nyala meski mata udah berat.</p>
+                    <span class="menu-card-price">Rp 28.000</span>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-number">03</div>
+                    <div class="menu-card-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M12 34h16M16 34V18l4-8 4 8v16" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20 10v-4M16 14h8" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="menu-card-name">Kopken Tubruk</h3>
+                    <p class="menu-card-desc">Kopi tubruk khas Kopken. Buat yang bilang "aku nggak butuh kopi" tapi tiap
+                        hari tetep beli.</p>
+                    <span class="menu-card-price">Rp 18.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="section-container">
+            <div class="experience-grid">
+                <div class="experience-text">
+                    <span class="section-label">Ritual Kita</span>
+                    <h2 class="section-title">Bukan Sekadar<br>Ngopi, Tapi Ritual</h2>
+                    <p class="section-desc">Buat kami, Kopi Kenangan bukan cuma tempat minum kopi. Ini adalah markas
+                        kedua. Tempat di mana tugas selesai (atau malah nggak selesai), obrolan jadi lebih seru, dan
+                        ikatan persahabatan makin kuat.</p>
+                </div>
+                <div class="experience-features">
+                    <div class="feature-item">
+                        <span class="feature-number">01</span>
+                        <div>
+                            <h4 class="feature-title">Tempat Nugas Favorit</h4>
+                            <p class="feature-desc">WiFi kenceng, colokan dimana-mana, AC sejuk. Kopken adalah kampus
+                                kedua kami.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-number">02</span>
+                        <div>
+                            <h4 class="feature-title">Obrolan Tanpa Batas</h4>
+                            <p class="feature-desc">Dari bahas deadline sampai curhat kehidupan. Semua cerita lebih enak
+                                sambil nyeruput kopi.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-number">03</span>
+                        <div>
+                            <h4 class="feature-title">Squad Kopken</h4>
+                            <p class="feature-desc">Punya grup WA khusus "Kopken Holic" buat rencanain kapan nongkrong
+                                lagi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="section-container">
+            <blockquote class="quote">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">Mau nugas? Kopken dulu.<br>Mau curhat? Kopken dulu.<br>Mau charger HP? Kopken
+                    dulu.</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Kopken Holic</h3>
+                    <p class="footer-tagline">Ngopi Dulu Aja</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="pages/gallery.html">Galeri</a>
+                    <a href="pages/about.html">Tentang</a>
+                    <a href="pages/developer.html">Developer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kopken Holic. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
-=======
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kopken Holic</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- Splash Screen -->
-  <div id="splash" class="splash">
-    <div class="splash-content">
-      <div class="splash-line"></div>
-      <h1 class="splash-title">Kopken Holic</h1>
-      <p class="splash-tagline">Ngopi Dulu Aja</p>
-      <div class="splash-line"></div>
-    </div>
-  </div>
-
-  <!-- Navigation -->
-  <header id="navbar" class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Kopken Holic</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav-menu" id="navMenu">
-        <a href="index.html" class="nav-link active">Beranda</a>
-        <a href="pages/gallery.html" class="nav-link">Galeri</a>
-        <a href="pages/about.html" class="nav-link">Tentang</a>
-        <a href="pages/developer.html" class="nav-link">Developer</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-particles">
-      <span class="particle"></span>
-      <span class="particle"></span>
-      <span class="particle"></span>
-      <span class="particle"></span>
-      <span class="particle"></span>
-      <span class="particle"></span>
-    </div>
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-badge">Kopi Kenangan Holic</div>
-        <h1 class="hero-title">
-          <span class="hero-line hero-line-1">Ngopi,</span>
-          <span class="hero-line hero-line-2"><em>Nugas</em></span>
-          <span class="hero-line hero-line-3">Ngobrol.</span>
-        </h1>
-        <p class="hero-desc">Kumpulan anak kuliahan yang lebih sering ketemu di Kopi Kenangan daripada di kampus. Deadline? Kopken dulu. Skripsi macet? Kopken dulu. Hidup berat? Kopken terus.</p>
-        <div class="hero-cta">
-          <a href="pages/gallery.html" class="btn btn-primary">
-            <span>Lihat Aktivitas</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <a href="pages/about.html" class="btn btn-outline">Tentang Kami</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-number">3+</span>
-            <span class="hero-stat-label">Tahun Nongkrong</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-number">99+</span>
-            <span class="hero-stat-label">Kopken Terhabiskan</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-number">0</span>
-            <span class="hero-stat-label">SKL Tepat Waktu</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-cup-wrapper">
-          <div class="hero-cup-glow"></div>
-          <svg class="hero-cup-svg" viewBox="0 0 280 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Saucer -->
-            <ellipse cx="140" cy="310" rx="120" ry="18" fill="#E8DDD4" opacity="0.6"/>
-            <ellipse cx="140" cy="308" rx="110" ry="14" fill="#F0E8E0"/>
-            <!-- Cup Body -->
-            <path d="M60 140 C60 140 55 280 80 295 C95 303 185 303 200 295 C225 280 220 140 220 140Z" fill="#FAF7F2" stroke="#C4956A" stroke-width="1.5"/>
-            <!-- Cup Handle -->
-            <path d="M220 170 C250 170 265 200 265 220 C265 240 250 265 220 265" fill="none" stroke="#C4956A" stroke-width="1.5" stroke-linecap="round"/>
-            <!-- Coffee Surface -->
-            <ellipse cx="140" cy="155" rx="78" ry="16" fill="#6B4226"/>
-            <ellipse cx="140" cy="153" rx="60" ry="11" fill="#8B5E3C" opacity="0.6"/>
-            <!-- Latte Art -->
-            <path d="M125 148 C130 140 138 145 140 148 C142 145 150 140 155 148" fill="none" stroke="#FAF7F2" stroke-width="1" opacity="0.7" stroke-linecap="round"/>
-            <path d="M132 152 C136 148 140 150 140 153 C140 150 144 148 148 152" fill="none" stroke="#FAF7F2" stroke-width="0.8" opacity="0.5" stroke-linecap="round"/>
-            <!-- Steam Lines -->
-            <path class="steam steam-1" d="M110 130 C110 115 115 105 110 90" stroke="#C4956A" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.3"/>
-            <path class="steam steam-2" d="M140 125 C140 108 145 95 140 78" stroke="#C4956A" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.3"/>
-            <path class="steam steam-3" d="M170 130 C170 115 165 105 170 90" stroke="#C4956A" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.3"/>
-            <!-- Cup Rim Highlight -->
-            <ellipse cx="140" cy="140" rx="80" ry="8" fill="none" stroke="#D4AA82" stroke-width="0.8" opacity="0.5"/>
-          </svg>
-          <div class="hero-cup-ring"></div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="hero-scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Favorite Orders Section -->
-  <section class="signature">
-    <div class="section-container">
-      <div class="section-header">
-        <span class="section-label">Paling Laris</span>
-        <h2 class="section-title">Orderan Wajib</h2>
-        <p class="section-desc">Tiga menu yang paling sering dipesan kalau lagi nongkrong di Kopken.</p>
-      </div>
-      <div class="menu-grid">
-        <div class="menu-card">
-          <div class="menu-card-number">01</div>
-          <div class="menu-card-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M8 32h24M12 32V16c0-2 1-4 4-4h8c3 0 4 2 4 4v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M36 18h-4c-1 0-2 1-2 2v4c0 1 1 2 2 2h4c1 0 2-1 2-2v-4c0-1-1-2-2-2z" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <h3 class="menu-card-name">Kopken Float</h3>
-          <p class="menu-card-desc">Es Kopi Kenangan + ice cream vanilla. Pesanan default kalau lagi panas-panas dan otak udah nggak muter.</p>
-          <span class="menu-card-price">Rp 22.000</span>
-        </div>
-        <div class="menu-card">
-          <div class="menu-card-number">02</div>
-          <div class="menu-card-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M10 34h20M14 34V14c0-3 2-5 5-5h2c3 0 5 2 5 5v20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M18 16c0 0 2-2 4 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M17 22c1-3 3-3 4 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="menu-card-name">Brown Sugar Signature</h3>
-          <p class="menu-card-desc">Yang bikin kalian ngerjain tugas sampai larut malam. Gula aren bikin otak tetap nyala meski mata udah berat.</p>
-          <span class="menu-card-price">Rp 28.000</span>
-        </div>
-        <div class="menu-card">
-          <div class="menu-card-number">03</div>
-          <div class="menu-card-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M12 34h16M16 34V18l4-8 4 8v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M20 10v-4M16 14h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="menu-card-name">Kopken Tubruk</h3>
-          <p class="menu-card-desc">Kopi tubruk khas Kopken. Buat yang bilang "aku nggak butuh kopi" tapi tiap hari tetep beli.</p>
-          <span class="menu-card-price">Rp 18.000</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section class="experience">
-    <div class="section-container">
-      <div class="experience-grid">
-        <div class="experience-text">
-          <span class="section-label">Ritual Kita</span>
-          <h2 class="section-title">Bukan Sekadar<br>Ngopi, Tapi Ritual</h2>
-          <p class="section-desc">Buat kami, Kopi Kenangan bukan cuma tempat minum kopi. Ini adalah markas kedua. Tempat di mana tugas selesai (atau malah nggak selesai), obrolan jadi lebih seru, dan ikatan persahabatan makin kuat.</p>
-        </div>
-        <div class="experience-features">
-          <div class="feature-item">
-            <span class="feature-number">01</span>
-            <div>
-              <h4 class="feature-title">Tempat Nugas Favorit</h4>
-              <p class="feature-desc">WiFi kenceng, colokan dimana-mana, AC sejuk. Kopken adalah kampus kedua kami.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <span class="feature-number">02</span>
-            <div>
-              <h4 class="feature-title">Obrolan Tanpa Batas</h4>
-              <p class="feature-desc">Dari bahas deadline sampai curhat kehidupan. Semua cerita lebih enak sambil nyeruput kopi.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <span class="feature-number">03</span>
-            <div>
-              <h4 class="feature-title">Squad Kopken</h4>
-              <p class="feature-desc">Punya grup WA khusus "Kopken Holic" buat rencanain kapan nongkrong lagi.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quote Section -->
-  <section class="quote-section">
-    <div class="section-container">
-      <blockquote class="quote">
-        <div class="quote-mark">"</div>
-        <p class="quote-text">Mau nugas? Kopken dulu.<br>Mau curhat? Kopken dulu.<br>Mau charger HP? Kopken dulu.</p>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <h3 class="footer-logo">Kopken Holic</h3>
-          <p class="footer-tagline">Ngopi Dulu Aja</p>
-        </div>
-        <div class="footer-links">
-          <a href="index.html">Beranda</a>
-          <a href="pages/gallery.html">Galeri</a>
-          <a href="pages/about.html">Tentang</a>
-          <a href="pages/developer.html">Developer</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Kopken Holic. Hak Cipta Dilindungi.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
->>>>>>> f73a63c100660564dea1619442d8da60078d15c6
