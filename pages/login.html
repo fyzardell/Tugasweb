@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk - Kopken Holic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header id="navbar" class="navbar scrolled">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Kopken Holic</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="../index.html" class="nav-link">Beranda</a>
+        <a href="gallery.html" class="nav-link">Galeri</a>
+        <a href="about.html" class="nav-link">Tentang</a>
+        <a href="developer.html" class="nav-link">Developer</a>
+        <a href="login.html" class="nav-link nav-link--login active">Masuk</a>
+        <a href="register.html" class="nav-link nav-link--register">Daftar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Auth Wrapper -->
+  <section class="auth-wrapper">
+    <div class="auth-container">
+
+      <!-- Left Intro (samain vibe index hero) -->
+      <div class="auth-intro">
+        <div class="auth-intro-badge">Kopi Kenangan Holic</div>
+        <h1 class="auth-intro-title">Ngopi dulu,<br><em>Masuk</em> dulu.</h1>
+        <p class="auth-intro-desc">Website Kopken Holic tanpa database — dibuat khusus untuk tugas kuliah. Silakan masuk menggunakan salah satu dari 3 akun yang tersedia.</p>
+
+        <div class="auth-demo-box">
+          <div class="auth-demo-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Demo Akun (3 User)
+          </div>
+          <div class="auth-demo-list">
+            <div class="auth-demo-item">
+              <span class="auth-demo-user"><span class="auth-demo-avatar">F</span> Firdy</span>
+              <span class="auth-demo-pass">firdy123</span>
+            </div>
+            <div class="auth-demo-item">
+              <span class="auth-demo-user"><span class="auth-demo-avatar">F</span> Faeyza</span>
+              <span class="auth-demo-pass">faeyza123</span>
+            </div>
+            <div class="auth-demo-item">
+              <span class="auth-demo-user"><span class="auth-demo-avatar">D</span> Dian</span>
+              <span class="auth-demo-pass">dian123</span>
+            </div>
+          </div>
+          <p style="font-size:0.72rem;color:var(--color-text-muted);margin-top:0.7rem;line-height:1.5;">* Username tidak case-sensitive. Password harus sesuai. Data tidak disimpan ke database.</p>
+        </div>
+      </div>
+
+      <!-- Right Card - Form -->
+      <div class="auth-card">
+        <div class="auth-card-header">
+          <span class="auth-card-label">Selamat Datang Kembali</span>
+          <h2 class="auth-card-title">Masuk Akun</h2>
+          <p class="auth-card-desc">Kopken dulu biar fokus, login dulu biar masuk.</p>
+        </div>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <div id="loginError" class="auth-error"></div>
+          <div id="loginSuccess" class="auth-success"></div>
+
+          <div class="auth-field">
+            <label for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" placeholder="Firdy / Faeyza / Dian" autocomplete="username" required>
+          </div>
+
+          <div class="auth-field">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" required>
+          </div>
+
+          <div class="auth-field-row">
+            <label class="auth-checkbox">
+              <input type="checkbox" id="rememberMe"> Ingat saya
+            </label>
+            <a href="#" class="auth-link-small" onclick="event.preventDefault(); alert('Fitur lupa password tidak tersedia - ini hanya demo tugas tanpa database :)')">Lupa password?</a>
+          </div>
+
+          <button type="submit" id="loginBtn" class="btn btn-primary btn-auth">
+            <span>Masuk</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="auth-divider"><span>atau</span></div>
+
+          <p class="auth-alt">Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal Login Success -->
+  <div id="loginSuccessModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-icon success">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <h3 class="modal-title">Login Berhasil!</h3>
+      <p class="modal-desc">Halo <strong id="successUserName">Kawan</strong>! Kamu berhasil masuk.<br>Kami akan mengarahkanmu ke beranda Kopken Holic.</p>
+      <div class="modal-actions">
+        <a href="../index.html" class="btn btn-primary">Ke Beranda</a>
+        <button class="btn btn-outline" data-close-modal="loginSuccessModal">Tetap di sini</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3 class="footer-logo">Kopken Holic</h3>
+          <p class="footer-tagline">Ngopi Dulu Aja</p>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html">Beranda</a>
+          <a href="gallery.html">Galeri</a>
+          <a href="about.html">Tentang</a>
+          <a href="developer.html">Developer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kopken Holic. Hak Cipta Dilindungi. &middot; Halaman login tanpa database — hanya untuk tujuan tugas.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

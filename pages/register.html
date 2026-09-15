@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - Kopken Holic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header id="navbar" class="navbar scrolled">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Kopken Holic</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="../index.html" class="nav-link">Beranda</a>
+        <a href="gallery.html" class="nav-link">Galeri</a>
+        <a href="about.html" class="nav-link">Tentang</a>
+        <a href="developer.html" class="nav-link">Developer</a>
+        <a href="login.html" class="nav-link nav-link--login">Masuk</a>
+        <a href="register.html" class="nav-link nav-link--register active">Daftar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Auth Wrapper -->
+  <section class="auth-wrapper">
+    <div class="auth-container">
+
+      <!-- Left Intro -->
+      <div class="auth-intro">
+        <div class="auth-intro-badge">Gabung Squad Kopken</div>
+        <h1 class="auth-intro-title">Bikin akun,<br><em>ngopi</em> bareng.</h1>
+        <p class="auth-intro-desc">Pengen jadi bagian dari Kopken Holic? Isi form pendaftaran di samping. Eits, tapi ada yang perlu kamu tahu dulu...</p>
+
+        <div class="auth-demo-box" style="border-style: dashed;">
+          <div class="auth-demo-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            Kenapa harus tahu?
+          </div>
+          <p style="font-size:0.85rem;color:var(--color-text-light);line-height:1.7;font-weight:300;">
+            Website ini <strong style="color:var(--color-primary);font-weight:500;">tidak menggunakan database</strong> dan dibuat <strong style="color:var(--color-primary);font-weight:500;">khusus untuk keperluan tugas kuliah</strong> saja. Jadi data yang kamu masukkan tidak akan tersimpan kemana-mana.
+          </p>
+          <p style="font-size:0.8rem;color:var(--color-text-muted);margin-top:0.6rem;font-style:italic;">Coba klik "Daftar" dan lihat popup-nya!</p>
+        </div>
+      </div>
+
+      <!-- Right Card - Register Form -->
+      <div class="auth-card">
+        <div class="auth-card-header">
+          <span class="auth-card-label">Buat Akun Baru</span>
+          <h2 class="auth-card-title">Daftar</h2>
+          <p class="auth-card-desc">Isi data di bawah — tapi ingat, ini cuma simulasi ya.</p>
+        </div>
+
+        <form id="registerForm" class="auth-form" novalidate>
+          <div class="auth-field">
+            <label for="regName">Nama Lengkap</label>
+            <input type="text" id="regName" placeholder="Contoh: Kopken Lovers" required>
+          </div>
+
+          <div class="auth-field">
+            <label for="regUsername">Username</label>
+            <input type="text" id="regUsername" placeholder="Pilih username kamu" required>
+          </div>
+
+          <div class="auth-field">
+            <label for="regEmail">Email</label>
+            <input type="email" id="regEmail" placeholder="kamu@email.com" required>
+          </div>
+
+          <div class="auth-field">
+            <label for="regPassword">Password</label>
+            <input type="password" id="regPassword" placeholder="Minimal 6 karakter" required>
+          </div>
+
+          <div class="auth-field">
+            <label for="regConfirm">Konfirmasi Password</label>
+            <input type="password" id="regConfirm" placeholder="Ulangi password" required>
+          </div>
+
+          <label class="auth-checkbox" style="margin-top:0.2rem;">
+            <input type="checkbox" required> Saya menyetujui syarat & ketentuan
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-auth">
+            <span>Daftar Sekarang</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <p class="auth-alt" style="margin-top:0.4rem;">Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal No Database (Popup utama) -->
+  <div id="regNoDbModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <h3 class="modal-title">Mohon Maaf!</h3>
+      <p class="modal-desc">
+        Website <strong>Kopken Holic</strong> saat ini <strong>tidak memiliki database</strong> dan dibuat <strong>hanya untuk keperluan tugas kuliah</strong>.<br><br>
+        Data registrasi yang kamu masukkan <strong>tidak dapat disimpan</strong>. Untuk masuk, silakan gunakan salah satu akun demo yang tersedia di halaman Login:<br>
+        <span style="display:inline-block;margin-top:0.6rem;background:var(--color-bg-warm);padding:0.4rem 0.8rem;border-radius:6px;font-size:0.82rem;color:var(--color-primary);font-weight:500;">Firdy • Faeyza • Dian</span>
+      </p>
+      <div class="modal-actions">
+        <a href="login.html" class="btn btn-primary">Ke Halaman Login</a>
+        <button class="btn btn-outline" data-close-modal="regNoDbModal">Mengerti</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3 class="footer-logo">Kopken Holic</h3>
+          <p class="footer-tagline">Ngopi Dulu Aja</p>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html">Beranda</a>
+          <a href="gallery.html">Galeri</a>
+          <a href="about.html">Tentang</a>
+          <a href="developer.html">Developer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kopken Holic. Hak Cipta Dilindungi. &middot; Halaman registrasi simulasi — tidak terhubung ke database.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
